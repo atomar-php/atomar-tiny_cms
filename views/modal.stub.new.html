@@ -1,0 +1,20 @@
+{% extends "_lightbox.html" %}
+
+{% block lightbox %}
+<div class="row">
+  <div class="col-xs-6">
+    <label for="field-name">Name:*</label>
+    <input type="text" class="form-control" data-validate="role-name" name="name" id="field-name" autocomplete="off" value="{{ stub.name }}" required>
+  </div>
+  <div class="col-xs-6">
+    <label for="field-slug">Slug:</label>
+    <input type="text" id="field-slug" class="form-control" name="slug" value="{{ stub.slug }}" disabled>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <label for="field-text">Text:*</label>
+    <textarea name="text" id="field-text" class="form-control" cols="30" rows="6">{{ stub.value }}</textarea>
+  </div>
+</div>
+{% endblock %}

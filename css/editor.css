@@ -1,0 +1,22 @@
+.cms-light-edit {
+	min-height:10px;
+}
+.cms-light-editor .cms-light-controls{
+	display:none;
+	background-color:rgba(255, 255, 255, 0.8);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-bottom: -20px;
+	z-index:10;
+	height:24px;
+	padding:2px;
+	position:relative;
+}
+.cms-light-editor:hover .cms-light-controls {
+	display:inline;
+}
+.cms-light-editor:hover {
+	border: dashed 1px #ccc;
+	margin:-1px;
+}
