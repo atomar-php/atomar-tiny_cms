@@ -35,7 +35,7 @@ CSS;
         $this->width(500);
         $this->header('New Stub');
 
-        echo $this->render_view('@tiny_cms/views/modal.stub.new.html');
+        echo $this->renderView('@tiny_cms/views/modal.stub.new.html');
     }
 
     function POST($matches = array()) {

@@ -32,7 +32,7 @@ class Hooks extends HookReceiver
 
     function hookControls()
     {
-        return 'tiny_cms/AdminIndex';
+        return 'tiny_cms\controller\AdminIndex';
     }
 
     /**
@@ -53,7 +53,7 @@ class Hooks extends HookReceiver
     function hookLibraries()
     {
         return array(
-            'tiny_cms/TinyCMS.php'
+            'TinyCMS.php'
         );
     }
 

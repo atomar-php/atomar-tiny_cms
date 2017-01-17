@@ -4,12 +4,12 @@
 
 {% block content %}
 <div class="page-header clearfix">
-  <h2 class="pull-left">CMS Light <small>Settings</small></h2>
+  <h2 class="pull-left">Tiny CMS <small>Settings</small></h2>
 </div>
 <div class="row">
   <div class="col-md-12">
     <p>To begin using CMS Light you must create some text stubs and then embed them into your template files using <code>{{ '{{' }} cms_light('stub-name', sys.template) {{ '}}' }}</code>. The <code>sys.template</code> variable is the path to the rendered template. This is an optional parameter, but using it will make it easier to track down where a stub is being used.</p>
-    <a class="btn btn-primary pull-right" data-lightbox="/admin/cms_light/stub/new/" ><span class="glyphicon glyphicon-plus-sign"></span> Create Stub</a>
+    <a class="btn btn-primary pull-right" data-lightbox="/admin/tiny_cms/stub/new/" ><span class="glyphicon glyphicon-plus-sign"></span> Create Stub</a>
   </div>
 </div>
 
@@ -28,7 +28,7 @@
       <td>{{ s.name }}</td>
       <td>{{ s.slug }} <span class="glyphicon glyphicon-info-sign pop" title="Stub Location" data-trigger="hover" data-content="{% if s.location != '' %}{{ s.location }}{% else %}Unknown{% endif%}"></span></td>
       <td>{{ word_trim(s.value, 84) }}</td>
-      <td><a data-lightbox="/admin/cms_light/stub/{{ s.id }}/edit/"><span class="glyphicon glyphicon-edit tip" title="edit"></span></a></td>
+      <td><a data-lightbox="/admin/tiny_cms/stub/{{ s.id }}/edit/"><span class="glyphicon glyphicon-edit tip" title="edit"></span></a></td>
     </tr>
   {% endfor %}
 </table>
