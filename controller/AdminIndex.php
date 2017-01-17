@@ -1,25 +1,25 @@
 <?php
 
-namespace cms_light\controller;
+namespace tiny_cms\controller;
 
-use atomic\core\Auth;
-use atomic\core\Controller;
-use atomic\core\Templator;
-use cms_light\CmsLightAPI;
+use atomar\core\Auth;
+use atomar\core\Controller;
+use atomar\core\Templator;
+use tiny_cms\TinyCMS;
 
 class AdminIndex extends Controller {
     function GET($matches = array()) {
-        Auth::authenticate('administer_cms_light');
-        Templator::$css[] = '/includes/extensions/cms_light/css/style.css';
+        Auth::authenticate('administer_tiny_cms');
+        Templator::$css[] = '/assets/tiny_cms/css/style.css';
         // render page
-        $stubs = CmsLightAPI::get_all_stubs();
+        $stubs = TinyCMS::get_all_stubs();
 
-        echo $this->render_view('cms_light/views/admin.index.html', array(
+        echo $this->renderView('@tiny_cms/views/admin.index.html', array(
             'stubs' => $stubs
         ));
     }
 
     function POST($matches = array()) {
-        $this->go('/admin/cms_light');
+        $this->go('/admin/tiny_cms');
     }
 }

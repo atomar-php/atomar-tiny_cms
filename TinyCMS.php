@@ -1,12 +1,12 @@
 <?php
 
-namespace cms_light;
-use atomic\core\Auth;
+namespace tiny_cms;
+use atomar\core\Auth;
 
 /**
  * This is the internal api class that can be used by third party extensions
  */
-class CmsLightAPI {
+class TinyCMS {
     /**
      * Render the text given the text id
      *
@@ -52,7 +52,7 @@ class CmsLightAPI {
             $response = <<<HTML
 <div id="cms-light-container-$id" class="cms-light-editor">
   <a data-lightbox="/admin/cms_light/stub/$id/edit/" class="cms-light-controls pull-right">Edit '$name' <span class="glyphicon glyphicon-cog"></span></a>
-  <span class="cms-light-value $muted">$value</span>
+  <span class="cms-light-value muted">$value</span>
 </div>
 HTML;
             return $response;

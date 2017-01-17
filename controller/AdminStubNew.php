@@ -1,16 +1,16 @@
 <?php
 
-namespace cms_light\controller;
+namespace tiny_cms\controller;
 
-use atomic\core\Auth;
-use atomic\core\Lightbox;
-use atomic\core\Templator;
-use cms_light\CmsLightAPI;
+use atomar\core\Auth;
+use atomar\core\Lightbox;
+use atomar\core\Templator;
+use tiny_cms\TinyCMS;
 
 class AdminStubNew extends Lightbox {
     function GET($matches = array()) {
-        if (!Auth::has_authentication('administer_cms_light')) {
-            set_error('You are not authorized to administer CMSLight');
+        if (!Auth::has_authentication('administer_tiny_cms')) {
+            set_error('You are not authorized to administer TinyCMS');
             $this->redirect('/');
         }
 
@@ -35,22 +35,22 @@ CSS;
         $this->width(500);
         $this->header('New Stub');
 
-        echo $this->render_view('cms_light/views/modal.stub.new.html');
+        echo $this->render_view('@tiny_cms/views/modal.stub.new.html');
     }
 
     function POST($matches = array()) {
-        if (!Auth::has_authentication('administer_cms_light')) {
+        if (!Auth::has_authentication('administer_tiny_cms')) {
             set_error('You are not authorized to administer CMSLight');
             $this->redirect('/');
         }
 
-        $result = CmsLightAPI::define_stub($_REQUEST['name'], $_REQUEST['text']);
+        $result = TinyCMS::define_stub($_REQUEST['name'], $_REQUEST['text']);
         if ($result) {
             set_success('Stub successfully created');
         } else {
             set_error('The stub could not be created');
         }
-        $this->redirect('/admin/cms_light/');
+        $this->redirect('/admin/tiny_cms/');
     }
 
     /**

@@ -1,0 +1,7 @@
+{
+  "name": "tiny_cms",
+  "version": "3.0",
+  "atomar_version": "0.2.*",
+  "description": "A very light weight content management system",
+  "author": "Joel Lonbeck <joel@neutrinographics.com>"
+}

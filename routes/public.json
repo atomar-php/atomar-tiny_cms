@@ -1,0 +1,6 @@
+{
+  "/admin/tiny_cms/?(\\?.*)?": "tiny_cms\\controller\\AdminIndex",
+  "/admin/tiny_cms/stub/new/?(\\?.*)?": "tiny_cms\\controller\\AdminStubNew",
+  "/!/tiny_cms/(?P<api>[a-zA-Z\\_-]+)/?(\\?.*)?": "tiny_cms\\controller\\API",
+  "/admin/tiny_cms/stub/(?P<id>\\d+)/edit/?(\\?.*)?": "tiny_cms\\controller\\AdminStubEdit"
+}

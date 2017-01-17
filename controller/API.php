@@ -1,14 +1,14 @@
 <?php
 
-namespace cms_light\controller;
+namespace tiny_cms\controller;
 
-use atomic\core\ApiController;
-use atomic\core\Auth;
+use atomar\core\ApiController;
+use atomar\core\Auth;
 
 class API extends ApiController {
 
     function get_delete_stub($id) {
-        if (Auth::has_authentication('administer_cms_light')) {
+        if (Auth::has_authentication('administer_tiny_cms')) {
             $stub = \R::load('cmslightstub', $id);
             if ($stub->id) {
                 \R::trash($stub);
