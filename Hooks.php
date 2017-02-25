@@ -53,7 +53,7 @@ class Hooks extends HookReceiver
     function hookLibraries()
     {
         return array(
-            'tiny_cms/TinyCMS.php'
+            'TinyCMS.php'
         );
     }
 
